@@ -95,7 +95,9 @@ input_number:
     min: 18
     max: 32
     step: 1
-
+```
+```yaml
+# configuration.yaml entry
 shell_command:
   set_ac_to_slider: 'irsend SEND_ONCE DELONGHI AC_{{ states("input_number.ac_temperature") }}_AUTO'
 ```
@@ -128,8 +130,9 @@ automation:
             data:
               title: "ToDo file error"
               message: "{{ todo_response['stderr'] }}"
-
-
+```
+```yaml
+# configuration.yaml entry
 shell_command:
   get_file_contents: "cat {{ filename }}"
 ```
